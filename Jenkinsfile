@@ -14,6 +14,12 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/nishant141114/jenkins-test-2.git'
             }
         }
+        stage('Package Lambda') {
+            steps {
+                // Create the deployment package
+                sh 'zip lambda_function.zip main.py'
+            }
+        }
         stage('Terraform Init') {
             steps {
                 // new code ehdcbejfd hbd j
