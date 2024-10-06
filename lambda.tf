@@ -2,6 +2,7 @@ provider "aws" {
   region = "us-west-2"
 }
 
+#  The resource aws_iam_role creates an IAM role that the Lambda function will assume when it runs.
 resource "aws_iam_role" "lambda_role" {
   name = "lambda_role"
 
